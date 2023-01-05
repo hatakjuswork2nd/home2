@@ -18,8 +18,10 @@ class ContactsController extends Controller
         // バリデーションルールを定義
         // 引っかかるとエラーを起こしてくれる
         $request->validate([//request=HTTPリクエスト情報(POSTされた入力値やURL、リクエストヘッダ情報など)を取得できる機能。バリデーション=値が適切かチェック
+        'name' => 'required',
         'email' => 'required|email',
         'title' => 'required',
+        'pref' => 'required',
         'body' => 'required',
         ]);
     
@@ -37,8 +39,10 @@ class ContactsController extends Controller
 {
     // バリデーション
     $request->validate([
+    'name' => 'required',
     'email' => 'required|email',
     'title' => 'required',
+    'pref' => 'required',
     'body' => 'required'
   ]);
 
@@ -62,4 +66,5 @@ class ContactsController extends Controller
         return view('contact.thanks');
 
     }
+
 }

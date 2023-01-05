@@ -2,15 +2,21 @@
 <form method="POST" action="{{ route('contact.send') }}">
   @csrf
 
+  <label>名前</label>
+  {{ $inputs['name'] }}
+  <!-- コントローラ側から変数を受け取る、表示している -->
+  <input name="name" value="{{ $inputs['name'] }}" type="hidden">
+  <!-- 値を送信する為のもの、type="hidden"は非表示 -->
+
   <label>メールアドレス</label>
   {{ $inputs['email'] }}
   <!-- コントローラ側から変数を受け取る、表示している -->
   <input name="email" value="{{ $inputs['email'] }}" type="hidden">
   <!-- 値を送信する為のもの、type="hidden"は非表示 -->
 
-  <label>タイトル</label>
-  {{ $inputs['title'] }}
-  <input name="title" value="{{ $inputs['title'] }}" type="hidden">
+  <label>都道府県</label>
+  {{ $inputs['pref'] }}
+  <input name="pref" value="{{ $inputs['pref'] }}" type="hidden">
 
 
   <label>お問い合わせ内容</label>
