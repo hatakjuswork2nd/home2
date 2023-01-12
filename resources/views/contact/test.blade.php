@@ -47,11 +47,8 @@
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <label for="birthday" class="font-semibold leading-none mt-4 mr-10">生年月日</label>
                     {{ $inputs['year'] }}
-                    <label for="year">年</label>
                     {{ $inputs['month'] }}
-                    <label for="month">月</label>
                     {{ $inputs['day'] }}
-                    <label for="day" >日</label>
                     <input name="year" value="{{ $inputs['year'] }}" type="hidden">
                     <input name="month" value="{{ $inputs['month'] }}" type="hidden">
                     <input name="day" value="{{ $inputs['day'] }}" type="hidden">
@@ -79,9 +76,7 @@
                 <div class="md:flex items-center mt-8">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <label for="pref_id" class="font-semibold leading-none mt-4">都道府県</label>
-config(['pref.php.'])
                         {{ $inputs['pref_id'] }}
-
                         <input name="pref_id" value="{{ $inputs['pref_id'] }}" type="hidden">
                     </div>
                 </div>

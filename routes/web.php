@@ -39,3 +39,5 @@ Route::get('/contact', 'App\Http\Controllers\ContactsController@index')->name('c
 Route::post('/contact/confirm', 'App\Http\Controllers\ContactsController@confirm')->name('contact.confirm');
 //送信完了ページ
 Route::post('/contact/thanks', 'App\Http\Controllers\ContactsController@send')->name('contact.send');
+
+Route::get('/contact/test', 'App\Http\Controllers\ContactsController@test')->name('contact.test');

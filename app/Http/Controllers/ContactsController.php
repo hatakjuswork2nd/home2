@@ -12,16 +12,27 @@ class ContactsController extends Controller
         // 入力ページを表示
         return view('contact.index');
     }
+    public function test()
+    {
+        //ページ作るようのテストページ
+        return view('contact.test');
+    }
     //indexページ→確認ページに変異する際のアクションメソッドを定義
     public function confirm(Request $request)// アクションメソッドの引数にリクエストオブジェクトを渡す
     {
         // バリデーションルールを定義
         // 引っかかるとエラーを起こしてくれる
         $request->validate([//request=HTTPリクエスト情報(POSTされた入力値やURL、リクエストヘッダ情報など)を取得できる機能。バリデーション=値が適切かチェック
+        'company' => 'required',
         'name' => 'required',
+        'call' => 'required',
         'email' => 'required|email',
-        'title' => 'required',
-        'pref' => 'required',
+        'year' => 'required',
+        'month' => 'required',
+        'day' => 'required',
+        'genders' => 'required',
+        'job' => 'required',
+        'pref_id' => 'required',
         'body' => 'required',
         ]);
     
@@ -39,11 +50,17 @@ class ContactsController extends Controller
 {
     // バリデーション
     $request->validate([
-    'name' => 'required',
-    'email' => 'required|email',
-    'title' => 'required',
-    'pref' => 'required',
-    'body' => 'required'
+        'company' => 'required',
+        'name' => 'required',
+        'call' => 'required',
+        'email' => 'required|email',
+        'year' => 'required',
+        'month' => 'required',
+        'day' => 'required',
+        'genders' => 'required',
+        'job' => 'required',
+        'pref_id' => 'required',
+        'body' => 'required',
   ]);
 
     // actionの値を取得

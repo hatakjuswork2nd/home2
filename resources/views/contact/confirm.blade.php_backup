@@ -47,11 +47,8 @@
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <label for="birthday" class="font-semibold leading-none mt-4 mr-10">生年月日</label>
                     {{ $inputs['year'] }}
-                    <label for="year">年</label>
                     {{ $inputs['month'] }}
-                    <label for="month">月</label>
                     {{ $inputs['day'] }}
-                    <label for="day" >日</label>
                     <input name="year" value="{{ $inputs['year'] }}" type="hidden">
                     <input name="month" value="{{ $inputs['month'] }}" type="hidden">
                     <input name="day" value="{{ $inputs['day'] }}" type="hidden">
@@ -79,9 +76,7 @@
                 <div class="md:flex items-center mt-8">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <label for="pref_id" class="font-semibold leading-none mt-4">都道府県</label>
-config(['pref.php.'])
                         {{ $inputs['pref_id'] }}
-
                         <input name="pref_id" value="{{ $inputs['pref_id'] }}" type="hidden">
                     </div>
                 </div>
@@ -95,11 +90,11 @@ config(['pref.php.'])
                 </div>
                 <div class="md:flex items-center mt-8">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-green-400 border border-gray-800 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-solid focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">入力内容確認</button>
+                        <!-- <button type="submit" class="inline-flex items-center px-4 py-2 bg-green-400 border border-gray-800 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-solid focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">入力内容確認</button> -->
+                        <button type="submit" name="action" value="back">入力内容修正</button>
+                        <button type="submit" name="action" value="submit">送信する</button>
                     </div>
                 </div>
-                <button type="submit" name="action" value="back">入力内容修正</button>
-                <button type="submit" name="action" value="submit">送信する</button>
             </form>
         </div>
     </div>
