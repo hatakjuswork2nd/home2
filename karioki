@@ -1,0 +1,11 @@
+                <div class="md:flex items-center mt-8">
+                    <!-- <div class="w-full flex flex-col"> -->
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <label class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest transition ease-in-out duration-150">必須</label>
+                        <label for="genders" class="font-semibold leading-none mt-4 mr-10">性別</label>
+                        <input type="text" name="genders" class="w-35 py-2 placeholder-gray-300 border border-gray-300 rounded-md" id="genders" value="{{old('genders')}}" placeholder="例) 性別">
+                            @if ($errors->has('genders'))
+                        <p class="error-message text-red-500">{{ $errors->first('genders') }}</p>
+                            @endif
+                    </div>
+                </div>

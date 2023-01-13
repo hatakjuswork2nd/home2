@@ -12,7 +12,7 @@
                 <div class="md:flex items-center mt-8">
                     <!-- <div class="w-full flex flex-col"> -->
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <label class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">必須</label>
+                        <label class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  transition ease-in-out duration-150">必須</label>
                         <label class="items-left">
                             <label for="company" class="font-semibold leading-none mt-4 ">会社名</label>
                             <label class="mr-12"></label>
@@ -26,7 +26,7 @@
                 <div class="md:flex items-center mt-8">
                     <!-- <div class="w-full flex flex-col"> -->
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <label class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 active:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">必須</label>
+                        <label class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest transition ease-in-out duration-150">必須</label>
                         <label for="name" class="font-semibold leading-none mt-4 mr-16">名前</label>
                         <input type="text" name="name" class="w-35 py-2 placeholder-gray-300 border border-gray-300 rounded-md" id="name" value="{{old('name')}}" placeholder="例) 名前">
                             @if ($errors->has('name'))
@@ -94,14 +94,15 @@
                 <script src="/js/birthday.js"></script>
   <!-- 生年月日ここまで -->
                 <div class="md:flex items-center mt-8">
-                    <!-- <div class="w-full flex flex-col"> -->
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <label class="inline-flex items-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest transition ease-in-out duration-150">必須</label>
                         <label for="genders" class="font-semibold leading-none mt-4 mr-10">性別</label>
-                        <input type="text" name="genders" class="w-35 py-2 placeholder-gray-300 border border-gray-300 rounded-md" id="genders" value="{{old('genders')}}" placeholder="例) 性別">
-                            @if ($errors->has('genders'))
-                        <p class="error-message text-red-500">{{ $errors->first('genders') }}</p>
-                            @endif
+                        <input type="radio" id="contactChoice1" name="genders" value="genders_men" />
+                        <label for="contactChoice1">男</label>
+                        <input type="radio" id="contactChoice2" name="genders" value="genders_women" />
+                        <label for="contactChoice2">女</label>
+                        <input type="radio" id="contactChoice3" name="genders" value="genders_other" />
+                        <label for="contactChoice3">その他の性</label>
                     </div>
                 </div>
                 <div class="md:flex items-center mt-8">

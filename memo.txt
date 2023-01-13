@@ -5,6 +5,7 @@ xampp鯖のURL http://localhost/laravel/プロジェクト名/public
 新規作成→プロジェクト名を入力。utf8mb4_general_ci
 .envファイルを編集
 14行目DB_DATABASEを変更
+composer install
 php artisan serve
 php artisan migrateを実行してデータベースに反映
 認証機能
@@ -37,4 +38,5 @@ value="{{old('title')}}"
 {{old('body')}} 投稿エラーが出た時に入力内容が消えないようにするやつ
 
 php artisan storage:linkシンボリックリンクのために1回だけ
-https://textpro.addisteria.com/text/118/text-show
+{{ config('pref.pref')[$inputs['pref_id']] }}
+{{ config('ファイル名.変数')[$inputs['名前']] }}

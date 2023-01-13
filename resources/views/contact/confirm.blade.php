@@ -62,7 +62,7 @@
                 <div class="md:flex items-center mt-8">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <label for="genders" class="font-semibold leading-none mt-4 mr-10">性別</label>
-                        {{ $inputs['genders'] }}
+                        {{ config('pref.genders')[$inputs['genders']] }}
                         <input name="genders" value="{{ $inputs['genders'] }}" type="hidden">
                     </div>
                 </div>
@@ -79,9 +79,8 @@
                 <div class="md:flex items-center mt-8">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <label for="pref_id" class="font-semibold leading-none mt-4">都道府県</label>
-config(['pref.php.'])
-                        {{ $inputs['pref_id'] }}
-
+                        {{ config('pref.pref')[$inputs['pref_id']] }}
+                        <!-- {{ $inputs['pref_id'] }} -->
                         <input name="pref_id" value="{{ $inputs['pref_id'] }}" type="hidden">
                     </div>
                 </div>
