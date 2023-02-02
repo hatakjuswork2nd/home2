@@ -84,4 +84,21 @@ class ContactsController extends Controller
 
     }
 
+    
+    public function store(Request $request)
+    {
+        //
+        $contact = new ContactForm;
+        
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->url = $request->input('url');
+        $contact->sex = $request->input('sex');
+        $contact->age = $request->input('age');
+        $contact->subject = $request->input('subject');
+        $contact->description = $request->input('description');
+        $contact->save();
+        
+        return redirect('contact/index');
+    }
 }
