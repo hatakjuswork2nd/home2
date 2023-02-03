@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('name', 20);
             $table->string('call', 20);
             $table->string('email', 255);
-            $table->string('year', 4);
-            $table->string('month', 2);
-            $table->string('day', 2);
+            $table->integer('year', 4);
+            $table->integer('month', 2);
+            $table->integer('day', 2);
             $table->string('genders');
             $table->string('job', 255);
             $table->string('pref_id', 255);

@@ -90,15 +90,19 @@ class ContactsController extends Controller
         //
         $contact = new ContactForm;
         
+        $contact->company = $request->input('company');
         $contact->name = $request->input('name');
+        $contact->call = $request->input('call');
         $contact->email = $request->input('email');
-        $contact->url = $request->input('url');
-        $contact->sex = $request->input('sex');
-        $contact->age = $request->input('age');
-        $contact->subject = $request->input('subject');
-        $contact->description = $request->input('description');
+        $contact->year = $request->input('year');
+        $contact->month = $request->input('month');
+        $contact->day = $request->input('day');
+        $contact->genders = $request->input('genders');
+        $contact->job = $request->input('job');
+        $contact->pref_id = $request->input('pref_id');
+        $contact->body = $request->input('body');
         $contact->save();
         
-        return redirect('contact/index');
+        return redirect('contact/thanks');
     }
 }

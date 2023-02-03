@@ -15,7 +15,10 @@ php artisan migrateを実行してデータベースに反映
 　php artisan make:model ふんふん -m
 管理ツール(phpMyAdminなど)から変更するのはよくない
 　ロールバック　php artisan migrate:rollback　
-npm install
+ファイルをクローンしてきた時
+  npm install
+  .envファイル
+  composer installを実行して.vendorを作成。元環境と同じになる。
 cmdでnpm run devしないといけないらしい(Tailwind CSSやVueなどの変更を自動でブラウザに反映してくれます)
 config/app.php内のtimezozneをAsia/Tokyoに、localeをjaに
 日本語化
