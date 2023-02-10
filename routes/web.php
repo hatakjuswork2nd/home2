@@ -37,6 +37,7 @@ require __DIR__.'/auth.php';
 Route::get('/contact', 'App\Http\Controllers\ContactsController@index')->name('contact.index');
 //確認フォームページ
 Route::post('/contact/confirm', 'App\Http\Controllers\ContactsController@confirm')->name('contact.confirm');
+Route::post('/contact/store', 'App\Http\Controllers\ContactsController@store')->name('contact.store');
 //送信完了ページ
 Route::post('/contact/thanks', 'App\Http\Controllers\ContactsController@send')->name('contact.send');
 

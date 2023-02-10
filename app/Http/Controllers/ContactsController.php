@@ -35,7 +35,7 @@ class ContactsController extends Controller
         'pref_id' => 'required',
         'body' => 'required',
         ]);
-    
+
         // フォームからの入力値を全て取得
         $inputs = $request->all();// 連想配列形式で取得
         //渡す際のキー値をinputsとしているので確認ページ内では$inputs['項目名'] でアクセスできます
@@ -87,22 +87,21 @@ class ContactsController extends Controller
     
     public function store(Request $request)
     {
-        //
-        $contact = new ContactForm;
-        
-        $contact->company = $request->input('company');
-        $contact->name = $request->input('name');
-        $contact->call = $request->input('call');
-        $contact->email = $request->input('email');
-        $contact->year = $request->input('year');
-        $contact->month = $request->input('month');
-        $contact->day = $request->input('day');
-        $contact->genders = $request->input('genders');
-        $contact->job = $request->input('job');
-        $contact->pref_id = $request->input('pref_id');
-        $contact->body = $request->input('body');
-        $contact->save();
-        
+        //        
+        // $contact = new ContactForm;/**新しいインスタンス */
+        // 
+        // $contact->company = $request->input('company');
+        // $contact->name = $request->input('name');
+        // $contact->call = $request->input('call');
+        // $contact->email = $request->input('email');
+        // $contact->year = $request->input('year');
+        // $contact->month = $request->input('month');
+        // $contact->day = $request->input('day');
+        // $contact->genders = $request->input('genders');
+        // $contact->job = $request->input('job');
+        // $contact->pref_id = $request->input('pref_id');
+        // $contact->body = $request->input('body');
+        // $contact->save();
         return redirect('contact/thanks');
     }
 }

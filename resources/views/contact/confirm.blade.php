@@ -5,7 +5,7 @@
     </x-slot>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mx-4 sm:p-8">
-            <form method="POST" action="{{ route('contact.confirm') }}">
+            <form method="POST" action="{{ route('contact.store') }}">
                 @csrf
                 <div class="md:flex items-center mt-8">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
